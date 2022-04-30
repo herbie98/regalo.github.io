@@ -1,0 +1,74 @@
+.cont-cubo{
+    height: 300px;
+    width: 300px;
+    perspective: 1000px;
+    margin: 130px auto;
+  
+}
+.box-cubo{
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    
+    animation: rotar 15s infinite linear;
+}
+.cara{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+     transition: 10s;
+    transform-style: preserve-3d
+}
+.cara:nth-child(1){
+    transform: rotateY(0deg) translateZ(150px); 
+}
+.cara:nth-child(2){
+    transform: rotateY(90deg) translateZ(150px);
+}
+.cara:nth-child(3){
+    transform: rotateY(-90deg) translateZ(150px);  
+}
+.cara:nth-child(4){
+    transform: rotateY(180deg) translateZ(150px); 
+}
+.cara:nth-child(5){
+    transform: rotateX(90deg) translateZ(-220px);
+    background-color: #000;
+    opacity:.5;  
+}
+.cara:nth-child(6){
+    transform: rotateX(-90deg) translateZ(150px);
+    background-color: #111; 
+}
+.box-cubo:hover  .item{
+    transform: rotateX(-100deg)
+}
+.cont-cubo .item{
+    height: 100%;
+    width: 100%;
+    transform-origin:bottom;
+    transition: 5s;
+}
+.item img{
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes rotar{
+    0%{
+        transform: rotateY(0deg)
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+.HERMOSA {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    left: 50%;
+    top: 30%;
+}
+}
